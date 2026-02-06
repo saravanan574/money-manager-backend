@@ -6,7 +6,8 @@ const connectDB = require("./config/db");
 connectDB();
 
 const app = express();
-app.use(cors());
+app.use(cors({ origin:"https://money-manager-frontend-2uxb.onrender.com"
+}));
 app.use(express.json());
 
 app.use("/api/transactions", require("./routes/Transaction"));
