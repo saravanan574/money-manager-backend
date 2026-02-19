@@ -1,0 +1,51 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --primary: 222 83% 58%; /* Blue 600: #2563EB */
+    --primary-foreground: 210 40% 98%; /* White */
+    --primary-blue: 222 83% 58%; /* Duplicate for other uses */
+    --primary-blue-dark: 222 70% 41%; /* #1E40AF */
+    
+    /* Semantic Colors */
+    --success: 153.6 75.8% 39.4%; /* #10B981 */
+    --warning: 38.3 91.8% 55.5%; /* #F59E0B */
+    --destructive: 0 84.2% 60.2%; /* #EF4444 */
+    --info: 188.1 94.9% 41.2%; /* #06B6D4 */
+    --secondary: 262.1 83.3% 57.8%; /* #7C3AED */
+
+    /* Neutral Colors */
+    --background: 220 13% 97%; /* Gray 50: #F9FAFB */
+    --foreground: 222.2 47.4% 11.2%; /* Gray 900 */
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 222.2 47.4% 11.2%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+    --border: 214.3 31.8% 91.4%; /* Gray 200 */
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222 83% 58%; /* Primary Blue */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%; /* Gray 600 */
+    --accent: 210 40% 96.1%; /* Blue 100ish */
+    --accent-foreground: 222.2 47.4% 11.2%;
+    
+    /* Radius */
+    --radius-lg: 0.75rem; /* 12px */
+    --radius-md: 0.5rem; /* 8px */
+    --radius-sm: 0.375rem; /* 6px */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
